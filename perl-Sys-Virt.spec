@@ -1,20 +1,20 @@
 %define module  Sys-Virt
 %define name	perl-%{module}
 %define	modprefix Sys
-
 %define version 0.1.1
-%define release %mkrel 1
+%define release %mkrel 2
 
-Summary: Interface to libvirt virtual machine management API
-Name: %{name}
-Version: %{version}
-Release: %{release}
-Source0: ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{modprefix}/%{module}-%{version}.tar.bz2
-License: GPL or Artistic
-Group: Development/Perl
-Url: http://search.cpan.org/dist/%{module}/
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: perl-devel libvirt-devel
+Name:       %{name}
+Version:    %{version}
+Release:    %{release}
+Summary:    Interface to libvirt virtual machine management API
+License:    GPL or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{module}/
+Source:     http://www.cpan.org/modules/by-module/%{modprefix}/%{module}-%{version}.tar.bz2
+BuildRequires:  perl-devel
+BuildRequires:  libvirt-devel
+BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 
 %description
@@ -27,10 +27,10 @@ the virtual machine monitor.
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
-make
+make CFLAGS="%{optflags}"
 
 %check
-%make test
+make test
 
 %install
 rm -rf %{buildroot}
@@ -41,11 +41,9 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%{perl_vendorarch}/Sys/Virt.pm
-%dir %{perl_vendorarch}/Sys/Virt
-%{perl_vendorarch}/Sys/Virt/*.pm
-%dir %{perl_vendorarch}/auto/Sys/Virt
-%{perl_vendorarch}/auto/Sys/Virt/Virt.so
+%doc AUTHORS CHANGES README LICENSE
+%{perl_vendorarch}/Sys
+%{perl_vendorarch}/auto/Sys
 %{_mandir}/man3/Sys::Virt*3pm*
 
 
