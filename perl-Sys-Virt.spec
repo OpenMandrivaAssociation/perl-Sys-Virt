@@ -1,8 +1,8 @@
 %define module  Sys-Virt
 %define name	perl-%{module}
 %define	modprefix Sys
-%define version 0.1.1
-%define release %mkrel 3
+%define version 0.1.2
+%define release %mkrel 1
 
 Name:       %{name}
 Version:    %{version}
@@ -14,6 +14,7 @@ Url:        http://search.cpan.org/dist/%{module}/
 Source:     http://www.cpan.org/modules/by-module/%{modprefix}/%{module}-%{version}.tar.bz2
 BuildRequires:  perl-devel
 BuildRequires:  libvirt-devel
+BuildRequires:  perl(XML::XPath)
 BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 
