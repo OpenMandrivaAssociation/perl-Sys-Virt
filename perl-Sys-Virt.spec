@@ -1,8 +1,8 @@
 %define module  Sys-Virt
 %define name	perl-%{module}
 %define	modprefix Sys
-%define version 0.1.2
-%define release %mkrel 4
+%define version 0.2.0
+%define release %mkrel 1
 
 Name:       %{name}
 Version:    %{version}
