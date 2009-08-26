@@ -1,22 +1,22 @@
-%define module  Sys-Virt
-%define name	perl-%{module}
-%define	modprefix Sys
-%define version 0.2.0
-%define release %mkrel 1
+%define upstream_name    Sys-Virt
+%define upstream_version 0.2.1
 
-Name:       %{name}
-Version:    %{version}
-Release:    %{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:    Interface to libvirt virtual machine management API
-License:    GPL or Artistic
+License:    GPL+ or Artistic
 Group:      Development/Perl
-Url:        http://search.cpan.org/dist/%{module}/
-Source:     http://www.cpan.org/modules/by-module/%{modprefix}/%{module}-%{version}.tar.bz2
-BuildRequires:  perl-devel
+Url:        http://search.cpan.org/dist/%{upstream_name}/
+Source0:    http://www.cpan.org/modules/by-module/Sys/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires:  libvirt-devel
-BuildRequires:  xen-devel
 BuildRequires:  perl(XML::XPath)
-BuildRoot:      %{_tmppath}/%{name}-%{version}
+BuildRequires:  perl-devel
+BuildRequires:  xen-devel
+
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 
 
 %description
@@ -25,7 +25,7 @@ The Sys::Virt::Domain module represents a guest domain managed by
 the virtual machine monitor.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -47,5 +47,3 @@ rm -rf %{buildroot}
 %{perl_vendorarch}/Sys
 %{perl_vendorarch}/auto/Sys
 %{_mandir}/man3/Sys::Virt*3pm*
-
-
