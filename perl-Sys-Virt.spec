@@ -1,5 +1,5 @@
 %define upstream_name    Sys-Virt
-%define upstream_version 0.2.3
+%define upstream_version 0.2.4
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
