@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:	2
 
 Summary:    Interface to libvirt virtual machine management API
 License:    GPL+ or Artistic
