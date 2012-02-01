@@ -6,7 +6,7 @@ Version:	%perl_convert_version %{upstream_version}
 Release:	2
 
 Summary:	Interface to libvirt virtual machine management API
-License:	GPL+ or Artistic
+License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{module}/
 Source0:	http://www.cpan.org/modules/by-module/Sys/%{module}-%{upstream_version}.tar.gz
