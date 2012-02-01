@@ -11,7 +11,7 @@ Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}/
 Source0:    http://www.cpan.org/modules/by-module/Sys/%{upstream_name}-%{upstream_version}.tar.gz
 
-BuildRequires:  libvirt-devel
+BuildRequires:  pkgconfig(libvirt)
 BuildRequires:  perl(XML::XPath)
 BuildRequires:  perl-devel
 BuildRequires:  xen-devel
