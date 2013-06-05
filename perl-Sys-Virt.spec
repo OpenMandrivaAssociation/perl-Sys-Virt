@@ -2,14 +2,14 @@
 %define	upstream_version 0.9.9
 
 Name:		perl-%{module}
-Version:	%perl_convert_version %{upstream_version}
+Version:	%perl_convert_version 1.0.3
 Release:	1
 
 Summary:	Interface to libvirt virtual machine management API
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{module}/
-Source0:	http://www.cpan.org/modules/by-module/Sys/%{module}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Sys/Sys-Virt-%{version}.tar.gz
 
 BuildRequires:	pkgconfig(libvirt) >= 0.9.9
 BuildRequires:	perl(XML::XPath)

@@ -1,2 +1,4 @@
+removed_sources:
+  Sys-Virt-0.9.9.tar.gz: 3e4f465be2166f5b5bc5507db89a9dc86ecce501
 sources:
-  "Sys-Virt-0.9.9.tar.gz": 3e4f465be2166f5b5bc5507db89a9dc86ecce501
+  Sys-Virt-1.0.3.tar.gz: 1cc581b6feb2248d70c8c8a0d3281be236739fc8
