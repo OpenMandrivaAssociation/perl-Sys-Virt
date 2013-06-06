@@ -1,6 +1,5 @@
 %define	module	Sys-Virt
-%define	upstream_version 0.9.9
-
+%define upstream_version 1.0.3
 Name:		perl-%{module}
 Version:	%perl_convert_version 1.0.3
 Release:	1
