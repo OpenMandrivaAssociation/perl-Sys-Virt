@@ -2,7 +2,7 @@
 %define upstream_version 1.0.3
 Name:		perl-%{module}
 Version:	%perl_convert_version 1.0.3
-Release:	2
+Release:	3
 
 Summary:	Interface to libvirt virtual machine management API
 License:	GPLv2+ or Artistic
