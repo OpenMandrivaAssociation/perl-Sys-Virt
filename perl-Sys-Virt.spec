@@ -7,7 +7,7 @@ Release:	3
 Summary:	Interface to libvirt virtual machine management API
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{module}/
+Url:		https://search.cpan.org/dist/%{module}/
 Source0:	http://www.cpan.org/modules/by-module/Sys/Sys-Virt-%{version}.tar.gz
 
 BuildRequires:	pkgconfig(libvirt) >= 0.9.9
