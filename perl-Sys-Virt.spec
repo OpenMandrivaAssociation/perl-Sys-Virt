@@ -10,6 +10,7 @@ Group:		Development/Perl
 Url:		https://search.cpan.org/dist/%{module}/
 Source0:	http://www.cpan.org/modules/by-module/Sys/Sys-Virt-%{version}.tar.gz
 
+BuildRequires:	make
 BuildRequires:	pkgconfig(libvirt) >= 0.9.9
 BuildRequires:	perl(XML::XPath)
 BuildRequires:	perl-devel
