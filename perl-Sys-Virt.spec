@@ -1,14 +1,14 @@
 %define	module	Sys-Virt
-%define upstream_version 1.0.3
+%define upstream_version v12.5.0
 Name:		perl-%{module}
-Version:	%perl_convert_version 1.0.3
-Release:	3
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Interface to libvirt virtual machine management API
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{module}/
-Source0:	http://www.cpan.org/modules/by-module/Sys/Sys-Virt-%{version}.tar.gz
+Url:		https://gitlab.com/libvirt/libvirt-perl
+Source0:	https://cpan.metacpan.org/authors/id/D/DA/DANBERR/Sys-Virt-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	pkgconfig(libvirt) >= 0.9.9
